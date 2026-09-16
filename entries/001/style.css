@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+}
+
+.scene {
+  min-height: 100svh;
+}
+
+.scene-1 {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.coffee-set {
+  position: absolute;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coffee-set span {
+  display: block;
+}
+
+.scene-1 > .treatment-1 {
+  font-family: "Advent Pro", sans-serif;
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 0.8;
+}
+
+.treatment-2,
+.treatment-3 {
+  opacity: 0;
+}
