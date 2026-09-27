@@ -5,10 +5,10 @@
       "sketchSrc": "direction-01/sketch-1.jpg",
       "captionSketch": "charcoal pencil — the cluster I kept redrawing",
       "artboards": [
-        { "kind": "image", "src": "direction-01/asset-1" },
+        { "kind": "image", "src": "../data/direction-01/asset-1" },
         {
           "kind": "image",
-          "src": "direction-01/asset-2",
+          "src": "../data/direction-01/asset-2",
           "captionArtboard": "four takes explored on the same artboard",
           "notes": "<p>This direction came out of the pixel/checkerboard doodles scattered across the first sketch page — building the letterform out of a small grid rather than one continuous stroke.</p><p>The same Illustrator artboard held several passes at the idea — the icon alone, the icon paired with the wordmark, and two translucent, gradient-blended takes that trade the hard pixel grid for something softer.</p><p>The animation tests a \"still loading\" behavior: pixel cells flicker at slightly different rates, like the mark is assembling itself, while the two bowls breathe gently so it never feels static.</p>",
           "animations": [
