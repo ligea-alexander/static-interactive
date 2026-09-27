@@ -17,6 +17,7 @@ function resolveAssetPath(assetPath) {
     .replace(/^\.?\//, "")
     .replace(/^\/+/, "");
   if (normalized.startsWith("entries/002/assets/")) return `assets/${normalized.slice("entries/002/assets/".length)}`;
+  if (normalized.startsWith("../")) return normalized;
   if (normalized.startsWith("assets/") || normalized.startsWith("direction-")) return normalized;
   return `assets/${normalized}`;
 }
@@ -43,11 +44,7 @@ function normalizeDirection(direction, index) {
     captionArtboard: direction.captionArtboard || "add Illustrator export",
     artboards: Array.isArray(direction.artboards) ? direction.artboards : [],
     animations: Array.isArray(direction.animations)
-      ? direction.animations.map((animation) => ({
-          ...animation,
-          render: window.animationRegistry?.[animation.type] || null,
-          caption: animation.caption || "",
-        }))
+      ? direction.animations.map((animation) => ({ ...animation, caption: animation.caption || "" }))
       : [],
     notes: direction.notes || "<p>No notes have been added for this direction.</p>",
   };
@@ -70,7 +67,9 @@ async function loadDirections() {
 
 /* ---------- deck rendering ---------- */
 function arrowsHtml(index) {
-  return `<button class="icon-btn variant-arrow prev" data-i="${index}" data-dir="-1" aria-label="Previous version">&#8249;</button><button class="icon-btn variant-arrow next" data-i="${index}" data-dir="1" aria-label="Next version">&#8250;</button>`;
+  return `
+  <button class="icon-btn variant-arrow prev" data-i="${index}" data-dir="-1" aria-label="Previous version">&#8249;</button>
+  <button class="icon-btn variant-arrow next" data-i="${index}" data-dir="1" aria-label="Next version">&#8250;</button>`;
 }
 
 function renderArtboardContactSheet(index) {
@@ -125,7 +124,6 @@ async function renderAnimationVariant(index) {
   if (!variant || !container || !caption) return;
   container.innerHTML = "";
   if (variant.svgPath) await loadSvgAsset(variant.svgPath, container);
-  else if (variant.render) variant.render(container);
   caption.textContent = variant.caption;
 }
 

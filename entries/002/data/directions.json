@@ -2,36 +2,101 @@
   "directions": [
     {
       "title": "Geometry Meets Organic Form",
-      "sketchSrc": "direction-01/sketch-1.JPG",
+      "sketchSrc": "../img/logos_class_sketch1.JPG",
       "captionSketch": "charcoal pencil — the cluster I kept redrawing",
       "artboards": [
         { "kind": "image", "src": "direction-01/asset-1.png" },
-        { "kind": "image", "src": "direction-01/asset-3.png" },
-        { "kind": "image", "src": "direction-01/asset-4.png" },
-        { "kind": "image", "src": "direction-01/asset-5.png" },
-        { "kind": "image", "src": "direction-01/asset-7.png" },
-        { "kind": "image", "src": "direction-01/asset-8.png" }
+        { "kind": "image", "src": "direction-01/asset-2.png" },
+        { "kind": "image", "src": "direction-01/asset-3.png" }
       ],
       "captionArtboard": "four takes explored on the same artboard",
       "notes": "<p>This direction came out of the pixel/checkerboard doodles scattered across the first sketch page — building the letterform out of a small grid rather than one continuous stroke.</p><p>The same Illustrator artboard held several passes at the idea — the icon alone, the icon paired with the wordmark, and two translucent, gradient-blended takes that trade the hard pixel grid for something softer.</p><p>The animation tests a \"still loading\" behavior: pixel cells flicker at slightly different rates, like the mark is assembling itself, while the two bowls breathe gently so it never feels static.</p>",
       "animations": [
-        {
-          "type": "pixlbloom",
-          "svgPath": "direction-01/mark-animated.svg",
-          "caption": "now it's live — real SVG, not a video"
-        }
+        { "svgPath": "direction-01/mark-animated.svg", "caption": "now it's live — real SVG, not a video" }
       ]
     },
     {
       "title": "Direction 02",
-      "artboards": [{ "kind": "image", "content": "data:image/png;base64,placeholder" }],
+      "sketchSrc": "../img/logos_class_sketch1.JPG",
+      "captionSketch": "placeholder",
+      "artboards": [
+        { "kind": "image", "src": "direction-02/asset-1.png" },
+        { "kind": "image", "src": "direction-02/asset-2.png" },
+        { "kind": "image", "src": "direction-02/asset-3.png" },
+        { "kind": "image", "src": "direction-02/asset-4.png" },
+        { "kind": "image", "src": "direction-02/asset-5.png" },
+        { "kind": "image", "src": "direction-02/asset-6.png" }
+      ],
       "captionArtboard": "placeholder",
-      "notes": "<p>Add your notes for direction 02 here.</p>"
+      "notes": "<p>Add your notes for direction 02 here.</p>",
+      "animations": [
+        { "svgPath": "direction-02/mark-animated.svg", "caption": "now it's live — real SVG, not a video" }
+      ]
     },
-    { "title": "Direction 03", "notes": "<p>Add your notes for direction 03 here.</p>" },
-    { "title": "Direction 04", "notes": "<p>Add your notes for direction 04 here.</p>" },
-    { "title": "Direction 05", "notes": "<p>Add your notes for direction 05 here.</p>" },
-    { "title": "Direction 06", "notes": "<p>Add your notes for direction 06 here.</p>" },
-    { "title": "Direction 07", "notes": "<p>Add your notes for direction 07 here.</p>" }
+    {
+      "title": "Direction 03",
+      "sketchSrc": "direction-03/sketch-1.JPG",
+      "captionSketch": "placeholder",
+      "artboards": [
+        { "kind": "image", "src": "direction-03/asset-1.png" },
+        { "kind": "image", "src": "direction-03/asset-2.png" },
+        { "kind": "image", "src": "direction-03/asset-3.png" }
+      ],
+      "captionArtboard": "placeholder",
+      "notes": "<p>Add your notes for direction 03 here.</p>",
+      "animations": []
+    },
+    {
+      "title": "Direction 04",
+      "sketchSrc": "direction-04/sketch-1.JPG",
+      "captionSketch": "placeholder",
+      "artboards": [
+        { "kind": "image", "src": "direction-04/asset-1.png" },
+        { "kind": "image", "src": "direction-04/asset-2.png" },
+        { "kind": "image", "src": "direction-04/asset-3.png" }
+      ],
+      "captionArtboard": "placeholder",
+      "notes": "<p>Add your notes for direction 04 here.</p>",
+      "animations": []
+    },
+    {
+      "title": "Direction 05",
+      "sketchSrc": "direction-05/sketch-1.JPG",
+      "captionSketch": "placeholder",
+      "artboards": [
+        { "kind": "image", "src": "direction-05/asset-1.png" },
+        { "kind": "image", "src": "direction-05/asset-2.png" },
+        { "kind": "image", "src": "direction-05/asset-3.png" }
+      ],
+      "captionArtboard": "placeholder",
+      "notes": "<p>Add your notes for direction 05 here.</p>",
+      "animations": []
+    },
+    {
+      "title": "Direction 06",
+      "sketchSrc": "direction-06/sketch-1.JPG",
+      "captionSketch": "placeholder",
+      "artboards": [
+        { "kind": "image", "src": "direction-06/asset-1.png" },
+        { "kind": "image", "src": "direction-06/asset-2.png" },
+        { "kind": "image", "src": "direction-06/asset-3.png" }
+      ],
+      "captionArtboard": "placeholder",
+      "notes": "<p>Add your notes for direction 06 here.</p>",
+      "animations": []
+    },
+    {
+      "title": "Direction 07",
+      "sketchSrc": "direction-07/sketch-1.JPG",
+      "captionSketch": "placeholder",
+      "artboards": [
+        { "kind": "image", "src": "direction-07/asset-1.png" },
+        { "kind": "image", "src": "direction-07/asset-2.png" },
+        { "kind": "image", "src": "direction-07/asset-3.png" }
+      ],
+      "captionArtboard": "placeholder",
+      "notes": "<p>Add your notes for direction 07 here.</p>",
+      "animations": []
+    }
   ]
 }

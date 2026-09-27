@@ -1,0 +1,12 @@
+<svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PixlBloom animated mark">
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="20" y="24" width="82" height="90" fill="#1c1b17" opacity="0.9"/>
+    <rect x="112" y="24" width="82" height="90" fill="#f6f2e9" stroke="#1c1b17"/>
+    <rect x="20" y="134" width="82" height="90" fill="#1c1b17" opacity="0.9"/>
+    <rect x="112" y="134" width="82" height="90" fill="#f6f2e9" stroke="#1c1b17"/>
+    <circle cx="270" cy="94" r="54" fill="#1c1b17"/>
+    <circle cx="270" cy="168" r="54" fill="#1c1b17" opacity="0.9"/>
+  </g>
+  <text x="210" y="118" fill="#1c1b17" font-size="30" font-weight="800" font-family="Arial, sans-serif">PixlBloom</text>
+  <text x="210" y="150" fill="#6e6a5d" font-size="12" letter-spacing="5" font-family="monospace">N Y C</text>
+</svg>
