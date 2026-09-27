@@ -164,6 +164,15 @@ function bindDeckControls() {
 const MOBILE_LAYOUT = window.innerWidth <= 680;
 const track = document.getElementById("track");
 const hint = document.getElementById("hint");
+const projectHeader = document.getElementById("project-header");
+
+function measureHeader() {
+  if (!projectHeader) return;
+  document.documentElement.style.setProperty("--header-h", `${projectHeader.getBoundingClientRect().height}px`);
+}
+
+measureHeader();
+if (document.fonts?.ready) document.fonts.ready.then(measureHeader);
 
 function setActiveRail(index) {
   railButtons.forEach((button, buttonIndex) => button.classList.toggle("active", buttonIndex === index));
@@ -207,7 +216,10 @@ if (!MOBILE_LAYOUT) {
     if (["ArrowRight", "ArrowDown", "PageDown"].includes(event.key)) gotoSlide(current + 1);
     if (["ArrowLeft", "ArrowUp", "PageUp"].includes(event.key)) gotoSlide(current - 1);
   });
-  window.addEventListener("resize", () => gsap.set(track, { x: -current * window.innerWidth }));
+  window.addEventListener("resize", () => {
+    measureHeader();
+    gsap.set(track, { x: -current * window.innerWidth });
+  });
 }
 
 /* ---------- notes, lightbox, and theme ---------- */
