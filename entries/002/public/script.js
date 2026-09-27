@@ -25,7 +25,7 @@ async function loadSvgAsset(svgPath, container) {
   try {
     const response = await fetch(resolveAssetPath(svgPath));
     if (!response.ok) throw new Error(`SVG fetch failed: ${response.status}`);
-    container.innerHTML = await response.text();
+    container.innerHTML = `<div class="external-animation">${await response.text()}</div>`;
   } catch (error) {
     console.error("Could not load SVG asset:", error);
     container.innerHTML = "<p>Missing SVG asset for this direction.</p>";
