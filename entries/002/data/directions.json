@@ -1,0 +1,48 @@
+{
+  "directions": [
+    {
+      "title": "Geometry Meets Organic Form",
+      "sketchSrc": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAGiAegDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD17Uvir4Q1v45pb319L9isgBY3CRkxbj2L9K9yd2d1MUoKvgqg7g9DXB2vwr0LRPhDe+GI7aNrYI04mdAZdyjI+fr2q58EdRutc+HGl6jd5MqtKpJ6hY+n6CvAlZ6o9foc74j1S2uPjNps19crDFoAxLk8qX6cVp+KfH95Bq76f4V0lfE2pv8AM4V8LCD3zXE+BfDtv8TPiN458W6qrf2aImjtQD8sjKMfpTv2bQdMfVrZpGed5n+Zj823PHNU49SWaeu/FTxZ4Djt5PEfhlLmC6YJDMsmAGPY+lWLzxp4y8E6xpl14jtEfRdVxmNDn7Hn7vPfNU/2nyB8N0tOWury6iMTbueGGcVZ+PN7Pp/wHicRmadVtkUMcsH4wR9DSSvYdz07yGUo+4PLKASR1wemRXDfET4s6H8NryKG+DzzI6pdCNS3kFumcdK5LXE8W/CTw/pHjzU9XbV4ktl/tSzC8cr+7x9OK0PBXh6Pxj8K9e8UaiqTan4mBlnWVQxUJymM9KSiluUnoeqQ3Ec9tBcxOHjuEWRD6gjNYnxG1pfDvw+1u/chFVPK3HsWGBVf4WSvd/D3SpJjmQM8e70A4Fcj+0pFcaz4Q0rwlaiTz9auY5N6KTtCNk5PaklqK9zW+Cfgy2034O2+l6mjTx6l5jXS9Cwfofwrn/DesTfs537+HvEBkuPAV1DN9g1KJCxtywPykCvXoV+zWFlaxIAIraOPHoVXBqK6gttR057W8t47qBz86SqGAx6Z6UKWuuwWueC/syzT+NLi6n+zyWuj6FcyPaGVCpuVduvPtXW31h4r+F/j/wAQ654b0IeKtL8QLtMBfYbJuze/Nen2sdvaRpBbW8dpF0HlIFH44qFNQ+1ahLbROVa1/wBbjo2apz5ndDsYfwz0XU9A0c3GuyiTXr2TzLojoq5yq/hXNNEPDPx/nmk4PixB5Z9dgr0dxuLZbBPc81598ZVGkv4X8Uk7W0eXy8eu84pLViZb+J3w8v8AxHq+g+JfDl+NL8RaEXEQYbhcA9R7VnW+ufFeYlbzwhFZ88XAmByf7+P1r0yRsCFwCqyxLLn6jNRyNJIP9bIV93NJvoybHNeG/CX9kXc+qX9z9v8AEF4B9qvAMBh2GPauiRwW2r8w9a",
+      "captionSketch": "charcoal pencil — the cluster I kept redrawing",
+      "artboards": [
+        {
+          "kind": "image",
+          "content": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVUAAAFkCAYAAACQKqgmAAAACXBIWXMAAAsSAAALEgHS3X78AAARxUlEQVR4nO3dP29bV5rH8d+zcJFiAHm7BbaQFi5mO8mvwEy1pTWvQHS3XZRuO9P9AKIql6bLqYbuplmErlxGBKZYOwiGLDZFYGBFZIBJqrPFPYwZWRL/nXufc+/5fgBCiiyTTxF/ce65l5cWQhCAZpjZkaQjSSeSHq58laQnWz7dQtJV/P5K0vXyawhhst+k2JURVaAeZnaiKprLx7bR3NdcVWSvJE0kXYUQrhueoThEFUgkRrS38jhwHOcuU1WBnYQQxs6zdBJRBXZkZg9VxfM0PnKM6DpvJI0ljVnFpkFUgS2ZWV9VRJ86j5IagU2AqAIbiIf252rvinRbryWNOOG1PaIK3CEe3p9KGkg69J3GzVzSIIQw8h6kLYgqcEO87KmvamVawqp0EwtJQ0lDtgbuR1SBKMZ0IOnMdZC8Edc1iCqKR0x3QlzvQFRRrLhnei7pufcsLcae6w1EFUUys3NVq1P2TNN4K+k8hHC19jc7jqiiKGbWU3XYeuw8Slddqlq5FrslQFRRhHioP5D0lfMoJZhL6pd6jStRRefF1elI5V5r6qXIVStRRWexOs3CVNWqtZi9VqKKTopvKx2JvdNcfB1CGHoP0YR/8h4ASC2e2f9WBDUnF2Y2ikcPncZKFZ0R/8EOxUX8OZtKOg0hzLwHqQtRRSfEd0WNxeq0DRaqwjrxHqQOHP6j9eL+6ZUIalscSPom3pe2c4gqWi3+w5yId0a10SszG3gPkRqH/2itGNRX3nNgb69DCH3vIVJhpYpWIqidcmZmI+8hUiGqaB0zG4qgdk1nwsrhP1ol/sPjkqnuav1WACtVtEY85Ceo3db6FStRRSuwh1qUVoeVqCJ7BLVIrQ0re6rIWryw/1vvOeCmdXusrFSRrfjW04nvFHB21rZ3XhFVZCneHGUs3imF6p1Xp95DbIqoIlcj8V5+fDKKW0HZI6rITrwf6lPvOZCVA0mTNtyPlRNVyAonprDGNISQ9YqVlSqysbKPCtzlOPdLrYgqcjIUn3iK9bK+IoDDf2Qhnt39s/ccaI2FpF6On9JKVOEuHvbPxOVT2M5UVVivvQdZxeE/cjASQcX2jiUNvIe4iZUqXHHYjwS+zOlDBIkq3HDYj0QWko5y2Qbg8B+ehiKo2N+Bqi2kLLBShQsz60n6xnsOdMofQgju1zkTVbgwsyvx3n6kNZd04r0NwOE/Ghff209QkdqhMrgagJUqGsXJKTTgseebAlipomkDEVTUa+j54qxU0Zh4J/+/OY+BMridtGKliia5riBQFLf/14gqGhEvoeLG02jKodedrDj8RyPMbCLpifccKMo8hHDU9IuapIeSsr6Tdkdd53jbsjpwoT8cPQshjJp8QZPUk/QXSf9o8oUL90DS/4YQ/v2+X7q4uPifR48e/dzQTLX54YcfHv3yyy+/855jEy9fvtT79++9x0A6ja9WH8Sv/1C1YkVzvlj3C48fP/59r9drYBQsjUYj7xGQ1qGZ9ZtcrXKiCkDXDZp8MaIKoOsO4317G0FUAZTgvKkXIqoASvAkvqOvdkQVQCkaWa0SVQCl6DfxIkQVQCkOmjhhRVQBlISoAkBCRBUAEqp9C4CoAigNUQWAhIgqACR0YGa13e6UqAIoUW2rVaIKoES9up6YqAIoUW0f7UNUARSprn1VogqgVL06npSoAijVUR1PSlQBlIrDfwBIqJaTVUQVQLHMLPmnSBNVACVLvgVAVAGU7Cj1ExJVACU7Sv2ERBUAEiKqAErWS/2ERBUAEiKqAJAQUQWAhIgqACREVAGU7Cj1ExJVACU7TP2ERBVAyaapn5CoAijZdeonJKoAkBBRBYCEiCoAJERUAZRslvoJiSqAks1SPyFRBYCEiCqAkk1SPyFRBVAyrlMFgFR"
+        },
+        {
+          "kind": "image",
+          "content": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAiEAAAFkCAYAAAD2auvFAAAACXBIWXMAAAsSAAALEgHS3X78AAAexUlEQVR4nO3dv25bSZrG4bcWjY0WkGaSnWRWbKCTnUTqKxAdLHajtuYKRF+B6SswnU00LV+BqStoejbprI/yAZoCGpPMAKawEzgYzIjABgt0UBtU0aJknn/kIb9zTv0egLBlUTyfKdl8WfVVlfPeC8BhOOfOJB1LevqrJA0knVR4mKWkefz9/drvM0n33vv5pi8CgLZxhBBgP5xzQ0lDhXBxJun0gJe/lbRQCCiZ9z474LUBoBJCCNAA59yxQuBY3Q4ZOKq6VRgtybz3M+NaAIAQAmwrTq0MJV1IOretZivvJc0kzbz399bFAEgPIQSowTk3kDRWCB5V+je6gkAC4OAIIUCJONUyirc2TrM07VrSlD4SAPtGCAFyxOmWsaRL61qM3EmaiNERAHtCCAGecM6NFEY9utjnsQ9LSVeSrggjAJpECAGiGD4m6levR5MIIwAaRQhB8ggftRFGADSCEIJkOecuFF5MCR/bWUqaeO+vrAsB0E2EECQnNpxeiZ6PptxKGrOaBkBd/2RdAHAozrlj59yVpB9FAGnSqaQfnHPTuJwZACphJARJiFMvU0lHxqX03VLSiG3hAVRBCEGvxXfmU0nPjUtJzXuFMELjKoBchBD0FqMf5paSLugVAZCHnhD0Tuz9mEr6TgQQS0cKvSIT60IAtBMjIeiVuPJlqjTOeOmSG4VREaZnAHzCSAh6I246lokA0kbnkhYxJAKAJEIIeiIuvX0npl/a7EjSjzEsAgAhBN0W+z9mkl5a14LK3tEnAkCiJwQdFpffZmL6pauuvfcj6yIA2CGEoJNib8FMnPvSdTSsAgkjhKBzYgDJRP9HX9xKGhJEgPTQE4JOIYD00qmkjHNngPQQQtAZBJBeI4gACSKEoBMIIEkgiACJIYSg9QggSSGIAAmhMRWtFl+MFiKApIZmVSABjISgtdb2ASGApOdU4QwgAD1GCEGbTcVGZCl7Hk9DBtBThBC0UjwL5rl1HTB3yRbvQH/RE4LWiQecvbOuA63ywns/tS4CQLMIIWgVVsIgx1KhUXVuXQiA5hBC0BocSIcSS0kDVswA/UFPCNpkIgII8h0pHFoIoCcIIWgF59yFpJfWdaD1zmPTMoAeYDoG5tiQDFv4rfeeURGg4xgJQRtMRQBBPVPn3MC6CAC7IYTAVJyGYT8Q1HUkdlQFOo8QAjNxGmZqXQc665yNzIBuoycEZpxzMzEKgt19zf4hQDcxEgITTMOgQVPrAgBshxCCg4vTMCyzRFNOmZYBuokQAgtjSSfWRaBXXrNaBugeekJwUPGF4oNxGeinG+/90LoIANUxEoJDm1oXgN46jycwA+gIRkJwMM65oaQfrOtAr91JOuOQO6AbGAnBIdGMin07Ueg5AtABhBAcRBwm54RcHMKYJlWgG5iOwUE45xZiRQwO59p7P7IuAkAxRkKwd845luTi0C4ZDQHaj5EQ7FXcmGwhTsnF4TEaArSck0QKMeC9d0Wf//3vf//fX3311a8PVc++/P3vf//Vcrn8V+s6qvj+++/1/fffW5eBZn3pvV9YFwFgsy+sC8BmX3311a+/+eYbGjkPaD7nDLQemkgaGdcAIAc9IQD6jN4QoMUIIQD6bmRdAIDNCCEA+o7Ny4CWIoQA6LsjzpQB2okQAiAFI+sCAHyOEAIgBec0qALtQwgBkAp6Q4CWIYQASMWFdQEAHiOEAEjFiXPuzLoIAA8IIQBSMrIuAMADQgiAlDAlA7QIIQRASk5YJQO0ByEEQGoYDQFaghACIDVD6wIABIQQAKkZWhcAICCEAEjNEUt1gXYghABI0dC6AACEEABpYiQEaAFCCIAUEUKAFiCEAEjRqXUBAAghABLlnBta1wCkjhACIFXH1gUAqSOEAEgVfSGAMUI",
+          "captionArtboard": "four takes explored on the same artboard",
+          "notes": "<p>This direction came out of the pixel/checkerboard doodles scattered across the first sketch page — building the letterform out of a small grid rather than one continuous stroke.</p><p>The same Illustrator artboard held several passes at the idea — the icon alone, the icon paired with the wordmark, and two translucent, gradient-blended takes that trade the hard pixel grid for something softer.</p><p>The animation tests a \"still loading\" behavior: pixel cells flicker at slightly different rates, like the mark is assembling itself, while the two bowls breathe gently so it never feels static.</p>",
+          "animations": [
+            {
+              "type": "pixlbloom",
+              "svgPath": "direction-01/mark-animated.svg",
+              "caption": "now it's live — real SVG, not a video"
+            }
+          ]
+        }
+      ],
+      "captionArtboard": "four takes explored on the same artboard",
+      "notes": "<p>This direction came out of the pixel/checkerboard doodles scattered across the first sketch page — building the letterform out of a small grid rather than one continuous stroke.</p><p>The same Illustrator artboard held several passes at the idea — the icon alone, the icon paired with the wordmark, and two translucent, gradient-blended takes that trade the hard pixel grid for something softer.</p><p>The animation tests a \"still loading\" behavior: pixel cells flicker at slightly different rates, like the mark is assembling itself, while the two bowls breathe gently so it never feels static.</p>",
+      "animations": [
+        {
+          "type": "pixlbloom",
+          "svgPath": "direction-01/mark-animated.svg",
+          "caption": "now it's live — real SVG, not a video"
+        }
+      ]
+    },
+    {
+      "title": "Direction 02",
+      "artboards": [{ "kind": "image", "content": "data:image/png;base64,placeholder" }],
+      "captionArtboard": "placeholder",
+      "notes": "<p>Add your notes for direction 02 here.</p>"
+    },
+    { "title": "Direction 03", "notes": "<p>Add your notes for direction 03 here.</p>" },
+    { "title": "Direction 04", "notes": "<p>Add your notes for direction 04 here.</p>" },
+    { "title": "Direction 05", "notes": "<p>Add your notes for direction 05 here.</p>" },
+    { "title": "Direction 06", "notes": "<p>Add your notes for direction 06 here.</p>" },
+    { "title": "Direction 07", "notes": "<p>Add your notes for direction 07 here.</p>" }
+  ]
+}

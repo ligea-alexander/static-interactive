@@ -1,0 +1,27 @@
+{
+  "name": "static-interactive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server . -p 0 -o public/index.html",
+    "server": "json-server --watch data/directions.json --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ligea-alexander/static-interactive.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ligea-alexander/static-interactive/issues"
+  },
+  "homepage": "https://github.com/ligea-alexander/static-interactive#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "json-server": "^1.0.0-beta.15"
+  }
+}
