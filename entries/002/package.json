@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server . -p 0 -o public/index.html",
+    "start": "http-server . -p 0 -c-1 -o public/index.html",
+    "dev": "http-server . -p 0 -c-1 -o public/index.html",
     "server": "json-server --watch data/directions.json --port 3000"
   },
   "repository": {

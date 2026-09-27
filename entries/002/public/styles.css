@@ -413,6 +413,27 @@ figure.panel {
 .variant-arrow.next {
   right: 6px;
 }
+.panel-frame.artboard > .artboard-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 22px;
+  height: 22px;
+  background: color-mix(in srgb, var(--paper) 86%, transparent);
+}
+.panel-frame.artboard > .artboard-arrow.prev {
+  left: 5px;
+  right: auto;
+}
+.panel-frame.artboard > .artboard-arrow.next {
+  right: 5px;
+  left: auto;
+}
+.artboard-arrow:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
 .corner {
   position: absolute;
   width: 10px;

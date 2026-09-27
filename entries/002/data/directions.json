@@ -6,21 +6,11 @@
       "captionSketch": "charcoal pencil — the cluster I kept redrawing",
       "artboards": [
         { "kind": "image", "src": "direction-01/asset-1.png" },
-        {
-          "kind": "image",
-          "src": "direction-01/asset-3.png",
-          "captionArtboard": "four takes explored on the same artboard",
-          "notes": "<p>This direction came out of the pixel/checkerboard doodles scattered across the first sketch page — building the letterform out of a small grid rather than one continuous stroke.</p><p>The same Illustrator artboard held several passes at the idea — the icon alone, the icon paired with the wordmark, and two translucent, gradient-blended takes that trade the hard pixel grid for something softer.</p><p>The animation tests a \"still loading\" behavior: pixel cells flicker at slightly different rates, like the mark is assembling itself, while the two bowls breathe gently so it never feels static.</p>",
-          "animations": [
-            {
-              "type": "pixlbloom",
-              "svgPath": "direction-01/mark-animated.svg",
-              "caption": "now it's live — real SVG, not a video"
-            }
-          ]
-        },
+        { "kind": "image", "src": "direction-01/asset-3.png" },
         { "kind": "image", "src": "direction-01/asset-4.png" },
-        { "kind": "image", "src": "direction-01/asset-5.png" }
+        { "kind": "image", "src": "direction-01/asset-5.png" },
+        { "kind": "image", "src": "direction-01/asset-7.png" },
+        { "kind": "image", "src": "direction-01/asset-8.png" }
       ],
       "captionArtboard": "four takes explored on the same artboard",
       "notes": "<p>This direction came out of the pixel/checkerboard doodles scattered across the first sketch page — building the letterform out of a small grid rather than one continuous stroke.</p><p>The same Illustrator artboard held several passes at the idea — the icon alone, the icon paired with the wordmark, and two translucent, gradient-blended takes that trade the hard pixel grid for something softer.</p><p>The animation tests a \"still loading\" behavior: pixel cells flicker at slightly different rates, like the mark is assembling itself, while the two bowls breathe gently so it never feels static.</p>",

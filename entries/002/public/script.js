@@ -8,6 +8,7 @@ let current = 0;
 let animating = false;
 let panelOpen = false;
 const variantState = [];
+const artboardState = [];
 
 function resolveAssetPath(assetPath) {
   if (!assetPath) return "";
@@ -76,13 +77,44 @@ function renderArtboardContactSheet(index) {
   const direction = directions[index];
   const content = document.getElementById(`artboard-content-${index}`);
   if (!direction || !content) return;
+  const start = artboardState[index] || 0;
   content.innerHTML = direction.artboards
-    .slice(0, ARTBOARD_PREVIEW_COUNT)
+    .slice(start, start + ARTBOARD_PREVIEW_COUNT)
     .map((variant) => {
       const source = resolveAssetPath(variant.src || variant.content || variant.path);
       return `<div class="artboard-cell">${variant.kind === "image" ? `<img src="${source}" alt="Illustrator artboard for ${direction.title}">` : variant.content}</div>`;
     })
     .join("");
+}
+
+function renderArtboardControls(index) {
+  const direction = directions[index];
+  const frame = document.getElementById(`artboard-frame-${index}`);
+  if (!direction || !frame || direction.artboards.length <= ARTBOARD_PREVIEW_COUNT) return;
+
+  frame.querySelectorAll(".artboard-arrow").forEach((button) => button.remove());
+  const start = artboardState[index] || 0;
+  const lastStart = Math.floor((direction.artboards.length - 1) / ARTBOARD_PREVIEW_COUNT) * ARTBOARD_PREVIEW_COUNT;
+  frame.insertAdjacentHTML(
+    "beforeend",
+    `<button class="icon-btn artboard-arrow prev" data-i="${index}" aria-label="Previous artboards" ${start === 0 ? "disabled" : ""}>&#8249;</button>
+     <button class="icon-btn artboard-arrow next" data-i="${index}" aria-label="Next artboards" ${start >= lastStart ? "disabled" : ""}>&#8250;</button>`,
+  );
+}
+
+function bindArtboardControls() {
+  document.querySelectorAll(".artboard-arrow").forEach((button) =>
+    button.addEventListener("click", () => {
+      const index = Number(button.dataset.i);
+      const direction = directions[index];
+      const lastStart = Math.floor((direction.artboards.length - 1) / ARTBOARD_PREVIEW_COUNT) * ARTBOARD_PREVIEW_COUNT;
+      const step = button.classList.contains("next") ? ARTBOARD_PREVIEW_COUNT : -ARTBOARD_PREVIEW_COUNT;
+      artboardState[index] = Math.max(0, Math.min(lastStart, (artboardState[index] || 0) + step));
+      renderArtboardContactSheet(index);
+      renderArtboardControls(index);
+      bindArtboardControls();
+    }),
+  );
 }
 
 async function renderAnimationVariant(index) {
@@ -104,6 +136,7 @@ function renderDeck() {
   trackElement.innerHTML = "";
   rail.innerHTML = "";
   variantState.length = 0;
+  artboardState.length = 0;
 
   if (!directions.length) {
     trackElement.innerHTML = `<section class="slide"><p class="placeholder">No directions are available from the API.</p></section>`;
@@ -117,6 +150,7 @@ function renderDeck() {
     const hasArtboards = direction.artboards.length > 0;
     const hasAnimations = direction.animations.length > 0;
     variantState[index] = { anim: 0 };
+    artboardState[index] = 0;
     const slide = document.createElement("section");
     slide.className = "slide";
     slide.id = `slide-${index}`;
@@ -124,7 +158,7 @@ function renderDeck() {
       <div class="slide-head"><p><span class="num">${String(index + 1).padStart(2, "0")}</span>${direction.title}</p><span class="dotted-rule"></span></div>
       <div class="panels">
         <figure class="panel"><div class="panel-frame sketch ${hasSketch ? "" : "placeholder"}">${hasSketch ? `<img src="${direction.sketchSrc}" alt="Sketch crop for ${direction.title}">` : `<p>Drop in the cropped sketch for ${direction.title}.</p>`}</div><figcaption><span class="mono num">fig. 1</span><span class="mono desc">${hasSketch ? direction.captionSketch : "add sketch crop"}</span></figcaption></figure>
-        <figure class="panel"><div class="panel-frame artboard ${hasArtboards ? "" : "placeholder"}"><div class="variant-content ${direction.artboards.length > 1 ? "contact-sheet" : ""}" id="artboard-content-${index}"></div></div><figcaption><span class="mono num">fig. 2</span><span class="mono desc">${hasArtboards ? direction.captionArtboard : "add Illustrator export"}</span></figcaption></figure>
+        <figure class="panel"><div class="panel-frame artboard ${hasArtboards ? "" : "placeholder"}" id="artboard-frame-${index}"><div class="variant-content ${direction.artboards.length > 1 ? "contact-sheet" : ""}" id="artboard-content-${index}"></div></div><figcaption><span class="mono num">fig. 2</span><span class="mono desc">${hasArtboards ? direction.captionArtboard : "add Illustrator export"}</span></figcaption></figure>
       </div>
       <div class="stage"><div class="stage-body ${hasAnimations ? "" : "placeholder"}"><button class="mono read-more notes-corner" data-i="${index}">Notes on this direction</button>${hasAnimations ? `<div class="live-slot" id="stage-${index}"></div><button class="icon-btn replay-btn" data-i="${index}" aria-label="Replay animation">&#8635;</button>${direction.animations.length > 1 ? arrowsHtml(index) : ""}` : `<p>Motion behavior for ${direction.title} has not been added.</p>`}</div><div class="stage-caption"><span class="mono"><span class="num">fig. 3</span> — <span id="caption-motion-${index}">${hasAnimations ? "" : "add motion idea"}</span>. <button class="mono read-more inline-notes" data-i="${index}">Notes on this direction</button></span></div></div>`;
     trackElement.appendChild(slide);
@@ -135,7 +169,10 @@ function renderDeck() {
     if (index === 0) railButton.classList.add("active");
     railButton.addEventListener("click", () => gotoSlide(index));
     rail.appendChild(railButton);
-    if (hasArtboards) renderArtboardContactSheet(index);
+    if (hasArtboards) {
+      renderArtboardContactSheet(index);
+      renderArtboardControls(index);
+    }
   });
 
   bindDeckControls();
@@ -158,6 +195,7 @@ function bindDeckControls() {
   document
     .querySelectorAll(".replay-btn")
     .forEach((button) => button.addEventListener("click", () => renderAnimationVariant(Number(button.dataset.i))));
+  bindArtboardControls();
 }
 
 /* ---------- navigation ---------- */
