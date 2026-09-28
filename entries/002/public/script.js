@@ -307,7 +307,7 @@ function applyTheme(theme) {
     theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
 }
 
-gsap.registerPlugin(Observer);
+gsap.registerPlugin(Observer, GSDevTools);
 applyTheme(localStorage.getItem("pixlbloom-theme") === "dark" ? "dark" : "light");
 themeButton.addEventListener("click", () => {
   const nextTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
