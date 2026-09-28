@@ -9,8 +9,10 @@ let railButtons = [];
 let current = 0;
 let animating = false;
 let panelOpen = false;
+let directionObserver;
 const variantState = [];
 const artboardState = [];
+const activeAnimations = [];
 
 function resolveAssetPath(assetPath) {
   if (!assetPath) return "";
@@ -24,12 +26,20 @@ function resolveAssetPath(assetPath) {
   return `assets/${normalized}`;
 }
 
-async function loadSvgAsset(svgPath, container) {
+async function loadSvgAsset(svgPath, container, scopeId) {
   if (!svgPath || !container) return;
   try {
     const response = await fetch(resolveAssetPath(svgPath));
     if (!response.ok) throw new Error(`SVG fetch failed: ${response.status}`);
     container.innerHTML = `<div class="external-animation">${await response.text()}</div>`;
+
+    const svg = container.querySelector(".external-animation > svg");
+    if (svg && scopeId) {
+      svg.id = scopeId;
+      svg.querySelectorAll("style").forEach((style) => {
+        style.textContent = style.textContent.replace(/\.cls-/g, `#${scopeId} .cls-`);
+      });
+    }
   } catch (error) {
     console.error("Could not load SVG asset:", error);
     container.innerHTML = "<p>Missing SVG asset for this direction.</p>";
@@ -124,12 +134,19 @@ async function renderAnimationVariant(index) {
   const container = document.getElementById(`stage-${index}`);
   const caption = document.getElementById(`caption-motion-${index}`);
   if (!variant || !container || !caption) return;
+
+  activeAnimations[index]?.kill();
+  activeAnimations[index] = null;
   container.innerHTML = "";
   if (variant.svgPath) {
-    await loadSvgAsset(variant.svgPath, container);
+    await loadSvgAsset(variant.svgPath, container, `direction-svg-${index + 1}`);
 
     if (index === 0) {
-      initPrimitiveOverlap(container);
+      activeAnimations[index] = initPrimitiveOverlap(container);
+    }
+
+    if (index === 1) {
+      activeAnimations[index] = initButterfly(container);
     }
   }
   caption.textContent = variant.caption;
@@ -228,17 +245,20 @@ function setActiveRail(index) {
 
 function gotoSlide(index) {
   if (index < 0 || index >= slides.length || animating) return;
+  activeAnimations[current]?.pause(0);
+  directionObserver?.disable();
   closePanel();
   animating = true;
   current = index;
   setActiveRail(index);
   gsap.to(track, {
     x: -index * window.innerWidth,
-    duration: 0.85,
+    duration: 0.95,
     ease: "power3.inOut",
     onComplete: () => {
       animating = false;
       renderAnimationVariant(index);
+      gsap.delayedCall(0.2, () => directionObserver?.enable());
     },
   });
   if (index > 0 && hint) gsap.to(hint, { opacity: 0, duration: 0.4 });
@@ -256,7 +276,7 @@ function handleDeckKeydown(event) {
 const navigationMedia = gsap.matchMedia();
 
 navigationMedia.add("(min-width: 681px)", () => {
-  const observer = ScrollTrigger.observe({
+  directionObserver = ScrollTrigger.observe({
     id: "direction-navigation",
     target: window,
     type: "wheel,touch",
@@ -272,7 +292,8 @@ navigationMedia.add("(min-width: 681px)", () => {
   gsap.set(track, { x: -current * window.innerWidth });
 
   return () => {
-    observer.kill();
+    directionObserver?.kill();
+    directionObserver = null;
     window.removeEventListener("keydown", handleDeckKeydown);
   };
 });
