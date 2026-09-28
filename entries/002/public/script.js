@@ -259,17 +259,13 @@ navigationMedia.add("(min-width: 681px)", () => {
   const observer = ScrollTrigger.observe({
     id: "direction-navigation",
     target: window,
-    type: "wheel,touch,pointer",
+    type: "wheel,touch",
     wheelSpeed: -1,
-    tolerance: 24,
-    dragMinimum: 10,
-    lockAxis: true,
+    tolerance: 50,
     preventDefault: true,
     ignore: "button, a, .notes-panel, .panel-overlay, .lightbox-overlay",
     onUp: () => !panelOpen && gotoSlide(current + 1),
     onDown: () => !panelOpen && gotoSlide(current - 1),
-    onLeft: () => !panelOpen && gotoSlide(current + 1),
-    onRight: () => !panelOpen && gotoSlide(current - 1),
   });
 
   window.addEventListener("keydown", handleDeckKeydown);
