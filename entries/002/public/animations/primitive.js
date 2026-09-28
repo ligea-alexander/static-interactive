@@ -1,7 +1,7 @@
 let primitiveDevTools;
 
 gsap.registerPlugin(CustomEase);
-CustomEase.create("custom", "M0,0 C0.15,0.026 0.875,0.221 1,1");
+CustomEase.create("custom", "M0,0 C0.221,0.173 0.677,0.297 1,1 ");
 
 function initPrimitiveOverlap(container) {
   const stem = container.querySelector("#stem");
