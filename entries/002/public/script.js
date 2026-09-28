@@ -123,7 +123,13 @@ async function renderAnimationVariant(index) {
   const caption = document.getElementById(`caption-motion-${index}`);
   if (!variant || !container || !caption) return;
   container.innerHTML = "";
-  if (variant.svgPath) await loadSvgAsset(variant.svgPath, container);
+  if (variant.svgPath) {
+    await loadSvgAsset(variant.svgPath, container);
+
+    if (index === 0) {
+      initPrimitiveOverlap(container);
+    }
+  }
   caption.textContent = variant.caption;
 }
 

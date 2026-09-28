@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196.51 230.83">
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 206.17 242.18">
   <defs>
     <style>
       .cls-1 {
@@ -17,11 +17,11 @@
     </style>
   </defs>
   <g id="drawings">
-    <g id="fusion_v3">
-      <g>
-        <rect class="cls-2" x=".5" y="34.34" width="81.34" height="194"/>
-        <polygon class="cls-1" points="54.48 20.78 185.11 .57 195.95 85.11 64.34 106.06 54.48 20.78"/>
-        <polygon class="cls-1" points="52.51 104.58 43.14 218.95 156.76 230.28 168.1 115.18 52.51 104.58"/>
+    <g id="fusion_v1">
+      <g id="primitive">
+        <rect id="stem" class="cls-2" x=".5" y="36.01" width="85.35" height="203.59"/>
+        <polygon id="upper-polygon" class="cls-1" points="57.14 21.78 194.23 .57 205.61 89.29 67.49 111.27 57.14 21.78"/>
+        <polygon id="lower-polygon" class="cls-1" points="55.08 109.72 45.25 229.74 164.48 241.63 176.38 120.84 55.08 109.72"/>
       </g>
     </g>
   </g>

@@ -29,7 +29,9 @@
       ],
       "captionArtboard": "placeholder",
       "notes": "<p>Add your notes for direction 02 here.</p>",
-      "animations": []
+      "animations": [
+        { "svgPath": "direction-02/mark-animated.svg", "caption": "now it's live — real SVG, not a video" }
+      ]
     },
     {
       "title": "Letter Grid + Place Encoding",
@@ -42,9 +44,7 @@
       ],
       "captionArtboard": "placeholder",
       "notes": "<p>Add your notes for direction 02 here.</p>",
-      "animations": [
-        { "svgPath": "direction-02/mark-animated.svg", "caption": "now it's live — real SVG, not a video" }
-      ]
+      "animations": []
     },
     {
       "title": "Typographic Emphasis",
