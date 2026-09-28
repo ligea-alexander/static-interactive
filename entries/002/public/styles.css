@@ -760,7 +760,8 @@ figcaption .desc {
 
 /* ---- tablet: two-column layout — sketch+artboard stacked on the
      left, the animation gets its own dedicated column on the right ---- */
-@media (max-width: 1024px) and (min-width: 681px) {
+@media (min-width: 681px) and (max-width: 1024px),
+  (min-width: 681px) and (max-width: 1366px) and (hover: none) and (pointer: coarse) {
   :root {
     --deck-gap: 18px;
   }
