@@ -17,19 +17,6 @@
     },
     {
       "title": "Geometry Meets Organic Form",
-      "sketchSrc": "direction-07/sketch-1.JPG",
-      "captionSketch": "placeholder",
-      "artboards": [
-        { "kind": "image", "src": "direction-07/asset-1.png" },
-        { "kind": "image", "src": "direction-07/asset-2.png" },
-        { "kind": "image", "src": "direction-07/asset-3.png" }
-      ],
-      "captionArtboard": "placeholder",
-      "notes": "<p>Add your notes for direction 07 here.</p>",
-      "animations": []
-    },
-    {
-      "title": "Letter Grid + Place Encoding",
       "sketchSrc": "../img/logos_class_sketch1.JPG",
       "captionSketch": "placeholder",
       "artboards": [
@@ -42,13 +29,11 @@
       ],
       "captionArtboard": "placeholder",
       "notes": "<p>Add your notes for direction 02 here.</p>",
-      "animations": [
-        { "svgPath": "direction-02/mark-animated.svg", "caption": "now it's live — real SVG, not a video" }
-      ]
+      "animations": []
     },
     {
-      "title": "Typographic Emphasis",
-      "sketchSrc": "direction-03/sketch-1.JPG",
+      "title": "Letter Grid + Place Encoding",
+      "sketchSrc": "../img/logos_class_sketch1.JPG",
       "captionSketch": "placeholder",
       "artboards": [
         { "kind": "image", "src": "direction-03/asset-1.png" },
@@ -56,72 +41,99 @@
         { "kind": "image", "src": "direction-03/asset-3.png" }
       ],
       "captionArtboard": "placeholder",
-      "notes": "<p>Add your notes for direction 03 here.</p>",
-      "animations": []
+      "notes": "<p>Add your notes for direction 02 here.</p>",
+      "animations": [
+        { "svgPath": "direction-02/mark-animated.svg", "caption": "now it's live — real SVG, not a video" }
+      ]
     },
     {
-      "title": "Geometric Reduction + Recomposition",
-      "sketchSrc": "direction-04/sketch-1.JPG",
+      "title": "Typographic Emphasis",
+      "sketchSrc": "../img/logos_class_sketch1.JPG",
       "captionSketch": "placeholder",
       "artboards": [
         { "kind": "image", "src": "direction-04/asset-1.png" },
         { "kind": "image", "src": "direction-04/asset-2.png" },
-        { "kind": "image", "src": "direction-04/asset-3.png" }
+        { "kind": "image", "src": "direction-04/asset-3.png" },
+        { "kind": "image", "src": "direction-04/asset-4.png" }
       ],
       "captionArtboard": "placeholder",
       "notes": "<p>Add your notes for direction 04 here.</p>",
       "animations": []
     },
     {
+      "title": "Geometric Reduction + Recomposition",
+      "sketchSrc": "../img/logos_class_sketch1.JPG",
+      "captionSketch": "placeholder",
+      "artboards": [
+        { "kind": "image", "src": "direction-05/asset-1.png" },
+        { "kind": "image", "src": "direction-05/asset-2.png" },
+        { "kind": "image", "src": "direction-05/asset-3.png" },
+        { "kind": "image", "src": "direction-05/asset-4.png" },
+        { "kind": "image", "src": "direction-05/asset-5.png" },
+        { "kind": "image", "src": "direction-05/asset-6.png" },
+        { "kind": "image", "src": "direction-05/asset-7.png" },
+        { "kind": "image", "src": "direction-05/asset-8.png" }
+      ],
+      "captionArtboard": "placeholder",
+      "notes": "<p>Add your notes for direction 05 here.</p>",
+      "animations": []
+    },
+    {
       "title": "Primitive Letterform Construction",
-      "sketchSrc": "direction-05/sketch-1.JPG",
-      "captionSketch": "placeholder",
-      "artboards": [
-        { "kind": "image", "src": "direction-05/asset-1.png" },
-        { "kind": "image", "src": "direction-05/asset-2.png" },
-        { "kind": "image", "src": "direction-05/asset-3.png" }
-      ],
-      "captionArtboard": "placeholder",
-      "notes": "<p>Add your notes for direction 05 here.</p>",
-      "animations": []
-    },
-    {
-      "title": "P/B Monogram Fusion",
-      "sketchSrc": "direction-05/sketch-1.JPG",
-      "captionSketch": "placeholder",
-      "artboards": [
-        { "kind": "image", "src": "direction-05/asset-1.png" },
-        { "kind": "image", "src": "direction-05/asset-2.png" },
-        { "kind": "image", "src": "direction-05/asset-3.png" }
-      ],
-      "captionArtboard": "placeholder",
-      "notes": "<p>Add your notes for direction 05 here.</p>",
-      "animations": []
-    },
-    {
-      "title": "Constructed Wordmark",
-      "sketchSrc": "direction-05/sketch-1.JPG",
-      "captionSketch": "placeholder",
-      "artboards": [
-        { "kind": "image", "src": "direction-05/asset-1.png" },
-        { "kind": "image", "src": "direction-05/asset-2.png" },
-        { "kind": "image", "src": "direction-05/asset-3.png" }
-      ],
-      "captionArtboard": "placeholder",
-      "notes": "<p>Add your notes for direction 05 here.</p>",
-      "animations": []
-    },
-    {
-      "title": "Modular Grid System",
-      "sketchSrc": "direction-06/sketch-1.JPG",
+      "sketchSrc": "../img/logos_class_sketch1.JPG",
       "captionSketch": "placeholder",
       "artboards": [
         { "kind": "image", "src": "direction-06/asset-1.png" },
         { "kind": "image", "src": "direction-06/asset-2.png" },
-        { "kind": "image", "src": "direction-06/asset-3.png" }
+        { "kind": "image", "src": "direction-06/asset-3.png" },
+        { "kind": "image", "src": "direction-06/asset-4.png" },
+        { "kind": "image", "src": "direction-06/asset-5.png" },
+        { "kind": "image", "src": "direction-06/asset-6.png" },
+        { "kind": "image", "src": "direction-06/asset-7.png" }
       ],
       "captionArtboard": "placeholder",
       "notes": "<p>Add your notes for direction 06 here.</p>",
+      "animations": []
+    },
+    {
+      "title": "P/B Monogram Fusion",
+      "sketchSrc": "../img/logos_class_sketch1.JPG",
+      "captionSketch": "placeholder",
+      "artboards": [
+        { "kind": "image", "src": "direction-07/asset-1.png" },
+        { "kind": "image", "src": "direction-07/asset-2.png" }
+      ],
+      "captionArtboard": "placeholder",
+      "notes": "<p>Add your notes for direction 07 here.</p>",
+      "animations": []
+    },
+    {
+      "title": "Constructed Wordmark",
+      "sketchSrc": "../img/logos_class_sketch1.JPG",
+      "captionSketch": "placeholder",
+      "artboards": [
+        { "kind": "image", "src": "direction-08/asset-1.png" },
+        { "kind": "image", "src": "direction-08/asset-2.png" },
+        { "kind": "image", "src": "direction-08/asset-3.png" }
+      ],
+      "captionArtboard": "placeholder",
+      "notes": "<p>Add your notes for direction 08 here.</p>",
+      "animations": []
+    },
+    {
+      "title": "Modular Grid System",
+      "sketchSrc": "../img/logos_class_sketch1.JPG",
+      "captionSketch": "placeholder",
+      "artboards": [
+        { "kind": "image", "src": "direction-09/asset-1.png" },
+        { "kind": "image", "src": "direction-09/asset-2.png" },
+        { "kind": "image", "src": "direction-09/asset-3.png" },
+        { "kind": "image", "src": "direction-09/asset-4.png" },
+        { "kind": "image", "src": "direction-09/asset-5.png" },
+        { "kind": "image", "src": "direction-09/asset-6.png" }
+      ],
+      "captionArtboard": "placeholder",
+      "notes": "<p>Add your notes for direction 09 here.</p>",
       "animations": []
     }
   ]
