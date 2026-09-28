@@ -1,4 +1,6 @@
 /* ---------- configuration and asset loading ---------- */
+gsap.registerPlugin(ScrollTrigger, GSDevTools);
+
 const ARTBOARD_PREVIEW_COUNT = 4;
 
 let directions = [];
@@ -203,10 +205,14 @@ function bindDeckControls() {
 }
 
 /* ---------- navigation ---------- */
-const MOBILE_LAYOUT = window.innerWidth <= 680;
+const MOBILE_QUERY = "(max-width: 680px)";
 const track = document.getElementById("track");
 const hint = document.getElementById("hint");
 const projectHeader = document.getElementById("project-header");
+
+function isMobileLayout() {
+  return window.matchMedia(MOBILE_QUERY).matches;
+}
 
 function measureHeader() {
   if (!projectHeader) return;
@@ -238,31 +244,54 @@ function gotoSlide(index) {
   if (index > 0 && hint) gsap.to(hint, { opacity: 0, duration: 0.4 });
 }
 
-if (!MOBILE_LAYOUT) {
-  Observer.create({
+function handleDeckKeydown(event) {
+  if (panelOpen) {
+    if (event.key === "Escape") closePanel();
+    return;
+  }
+  if (["ArrowRight", "ArrowDown", "PageDown"].includes(event.key)) gotoSlide(current + 1);
+  if (["ArrowLeft", "ArrowUp", "PageUp"].includes(event.key)) gotoSlide(current - 1);
+}
+
+const navigationMedia = gsap.matchMedia();
+
+navigationMedia.add("(min-width: 681px)", () => {
+  const observer = ScrollTrigger.observe({
+    id: "direction-navigation",
     target: window,
     type: "wheel,touch,pointer",
     wheelSpeed: -1,
-    tolerance: 8,
+    tolerance: 24,
+    dragMinimum: 10,
+    lockAxis: true,
     preventDefault: true,
-    onUp: () => !panelOpen && gotoSlide(current - 1),
-    onDown: () => !panelOpen && gotoSlide(current + 1),
-    onLeft: () => !panelOpen && gotoSlide(current - 1),
-    onRight: () => !panelOpen && gotoSlide(current + 1),
+    ignore: "button, a, .notes-panel, .panel-overlay, .lightbox-overlay",
+    onUp: () => !panelOpen && gotoSlide(current + 1),
+    onDown: () => !panelOpen && gotoSlide(current - 1),
+    onLeft: () => !panelOpen && gotoSlide(current + 1),
+    onRight: () => !panelOpen && gotoSlide(current - 1),
   });
-  window.addEventListener("keydown", (event) => {
-    if (panelOpen) {
-      if (event.key === "Escape") closePanel();
-      return;
-    }
-    if (["ArrowRight", "ArrowDown", "PageDown"].includes(event.key)) gotoSlide(current + 1);
-    if (["ArrowLeft", "ArrowUp", "PageUp"].includes(event.key)) gotoSlide(current - 1);
+
+  window.addEventListener("keydown", handleDeckKeydown);
+  gsap.set(track, { x: -current * window.innerWidth });
+
+  return () => {
+    observer.kill();
+    window.removeEventListener("keydown", handleDeckKeydown);
+  };
+});
+
+navigationMedia.add(MOBILE_QUERY, () => {
+  gsap.set(track, { clearProps: "transform" });
+  directions.forEach((direction, index) => {
+    if (direction.animations.length) renderAnimationVariant(index);
   });
-  window.addEventListener("resize", () => {
-    measureHeader();
-    gsap.set(track, { x: -current * window.innerWidth });
-  });
-}
+});
+
+window.addEventListener("resize", () => {
+  measureHeader();
+  if (!isMobileLayout()) gsap.set(track, { x: -current * window.innerWidth });
+});
 
 /* ---------- notes, lightbox, and theme ---------- */
 const panel = document.getElementById("notes-panel");
@@ -307,7 +336,6 @@ function applyTheme(theme) {
     theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
 }
 
-gsap.registerPlugin(Observer, GSDevTools);
 applyTheme(localStorage.getItem("pixlbloom-theme") === "dark" ? "dark" : "light");
 themeButton.addEventListener("click", () => {
   const nextTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
@@ -316,10 +344,10 @@ themeButton.addEventListener("click", () => {
 });
 
 loadDirections().then(() => {
-  if (!MOBILE_LAYOUT && slides.length) {
+  if (!isMobileLayout() && slides.length) {
     gsap.set(track, { x: 0 });
     renderAnimationVariant(0);
-  } else if (MOBILE_LAYOUT) {
+  } else if (isMobileLayout()) {
     directions.forEach((direction, index) => {
       if (direction.animations.length) renderAnimationVariant(index);
     });
