@@ -15,6 +15,12 @@ function initPrimitiveOverlap(container) {
 
   const hinge = "61 110";
 
+  const originalOpacity = {
+    stem: Number(gsap.getProperty(stem, "opacity")),
+    upper: Number(gsap.getProperty(upperPolygon, "opacity")),
+    lower: Number(gsap.getProperty(lowerPolygon, "opacity")),
+  };
+
   gsap.set([upperPolygon, lowerPolygon], { svgOrigin: hinge });
 
   const timeline = gsap.timeline({ id: "primitive-overlap-timeline", repeat: 2, repeatDelay: 0.5 });
@@ -31,15 +37,20 @@ function initPrimitiveOverlap(container) {
     // Tonal contrast changes during the upward return
     .to([stem, upperPolygon], { opacity: 1, duration: 1, ease: "power2.inOut" }, "<")
     .to(lowerPolygon, { opacity: 0.3, duration: 1, ease: "power2.inOut" }, "<")
-    // Mark the beginning of the second downward movement
-    .addLabel("second-lower")
 
-    // Upper polygon lowers again
-    .to(upperPolygon, { rotation: 23, duration: 1, ease: "power2.inOut" }, "second-lower")
-    .to(lowerPolygon, { rotation: -10, duration: 1, ease: "power2.inOut" }, "second-lower")
+    // Meet while the P tonality returns seamlessly to the original state
+    .addLabel("meet")
+    .to(upperPolygon, { rotation: 23, duration: 1, ease: "power2.inOut" }, "meet")
+    .to(lowerPolygon, { rotation: -10, duration: 1, ease: "power2.inOut" }, "meet")
+    .to(stem, { opacity: originalOpacity.stem, duration: 0.18, ease: "custom" }, "meet+=0.12")
+    .to(upperPolygon, { opacity: originalOpacity.upper, duration: 0.18, ease: "custom" }, "meet+=0.12")
+    .to(lowerPolygon, { opacity: originalOpacity.lower, duration: 0.18, ease: "custom" }, "meet+=0.12")
 
-    // Pronounce the complete B as the two moving forms meet
-    .to([stem, upperPolygon, lowerPolygon], { opacity: 1, duration: 0.12, ease: "custom" }, "second-lower+=0.62");
+    // Form the B as the upper and lower polygons separate
+    .addLabel("separate")
+    .to(upperPolygon, { rotation: 0, duration: 1, ease: "power2.inOut" }, "separate")
+    .to(lowerPolygon, { rotation: 0, duration: 1, ease: "power2.inOut" }, "separate")
+    .to([stem, upperPolygon, lowerPolygon], { opacity: 1, duration: 0.18, ease: "custom" }, "separate+=0.82");
 
   //   if (primitiveDevTools) primitiveDevTools.kill();
   //   primitiveDevTools = GSDevTools.create({

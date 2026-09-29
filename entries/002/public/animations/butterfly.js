@@ -53,7 +53,7 @@ function initButterfly(container) {
     .to(darkWing, { scaleX: 1, rotation: 0, duration: 1.2, ease: "sine.inOut" }, "first-collapse+=0.16")
     .addLabel("p-landing")
     .to([body, darkWing], { opacity: 1, duration: 0.18, ease: "sine.out" }, "p-landing")
-    .to({}, { duration: 0.45 })
+    .to({}, { duration: 1 })
 
     .addLabel("second-expand")
     .to(
